@@ -1,0 +1,7 @@
+<h1 *ngIf="buscar == null" class="animated fadeIn fast">Héroes <small>de Marvel y DC</small></h1>
+<h1 *ngIf="buscar != null" class="animated fadeIn fast">Resultados de busqueda: <small>{{buscar}}</small></h1>
+<button *ngIf="buscar != null" [routerLink]="['/heroes']" class="btn btn-outline-primary limpiar-busqueda">Limpiar búsqueda</button>
+<div *ngIf="heroes.length > 0" class="card-columns">
+    <app-heroe-tarjeta *ngFor="let heroe of heroes" [heroe]="heroe"></app-heroe-tarjeta>
+</div>
+<h1 *ngIf="heroes.length === 0">Sin resultados</h1>

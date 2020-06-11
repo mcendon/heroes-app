@@ -1,0 +1,9 @@
+<div class="card animated fadeIn">
+    <img class="card-img-top" src="{{heroe.img}}" alt="Card image cap" />
+    <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">Aparición: {{heroe.aparicion | date: 'dd/MM/yyyy'}}</small></p>
+        <a [routerLink]="['/heroe', heroe.id]" class="btn btn-block btn-outline-primary">Ver más</a>
+    </div>
+</div>

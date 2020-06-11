@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['home']">
+        <img src="assets/img/A-64.png" width="30" height="30" alt="" />
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" routerLinkActive="active" [routerLink]="['heroes']">Héroes</a>
+                    <a class="dropdown-item" routerLinkActive="active" [routerLink]="['about']">Acerca de</a>
+                </div>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" (keyup.enter)="buscarHeroes(buscarTexto.value)" #buscarTexto>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+        </div>
+    </div>
+</nav>

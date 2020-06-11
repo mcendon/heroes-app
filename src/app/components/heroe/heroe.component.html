@@ -1,0 +1,10 @@
+<h1 class="animated fadeIn fast">{{heroe.nombre | uppercase}} <small>{{heroe.aparicion | date: 'y'}}</small></h1>
+<div class="card animated fadeIn">
+    <img class="card-img-top" src="{{heroe.img}}" alt="Card image cap" />
+    <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">Aparición: {{heroe.aparicion | date: 'dd/MM/yyyy'}}</small></p>
+        <a (click)="goBack()" class="btn btn-block btn-outline-danger">Volver...</a>
+    </div>
+</div>
